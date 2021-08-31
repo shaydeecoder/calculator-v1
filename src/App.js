@@ -50,7 +50,10 @@ function App() {
     <div className="App">
       <div className="calculator">
         <div className="calculator__display">
-          <span>{result ? `(${result})` : ""}</span> {calc || "0"}
+          {calc || "0"}
+          <div>
+            <span>{result ? result : ""}</span>
+          </div>
         </div>
 
         <div className="calculator__operators">
