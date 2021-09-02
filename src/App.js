@@ -1,4 +1,5 @@
 import { useState } from "react";
+import evaluate from "mathjs";
 
 // Styles
 import "./App.css";
@@ -18,7 +19,8 @@ function App() {
 
     setCalc(calc + value);
 
-    if (!operators.includes(value)) setResult(eval(calc + value).toString());
+    if (!operators.includes(value))
+      setResult(evaluate(calc + value).toString());
   };
 
   const createDigits = () => {
@@ -35,7 +37,7 @@ function App() {
     return digits;
   };
 
-  const calculate = () => setCalc(eval(calc).toString());
+  const calculate = () => setCalc(evaluate(calc).toString());
 
   const deleteLast = () => {
     if (!calc) return;
