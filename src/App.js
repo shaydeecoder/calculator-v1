@@ -1,5 +1,5 @@
 import { useState } from "react";
-import evaluate from "mathjs";
+import { evaluate } from "mathjs";
 
 // Styles
 import "./App.css";
